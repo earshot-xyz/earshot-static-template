@@ -2,42 +2,47 @@
 
   <div class="wrapper">
 
-    <h2 class="footer-heading">{{ site.title | escape }}</h2>
+    <h2 class="footer-heading">{{ site.title | escape }} • {{ site.description | escape }}</h2>
 
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
         <ul class="contact-list">
-          <li>
-            {% if site.author %}
-              {{ site.author | escape }}
-            {% else %}
-              {{ site.title | escape }}
-            {% endif %}
+          {% if site.info %}
+            <li><strong>{{ site.info.name | escape }}</strong></li>
+            <li>{{ site.info.address | escape }}</li>
+            <li>{{ site.info.cap | escape }}
+              {{ site.info.city | escape }}
+              {{ site.info.country | escape }}
+              {{ site.info.state | escape }}</li>
+            <li>CF/P.IVA {{ site.info.piva | escape }}
+          {% else %}
+            <li>{{ site.title | escape }}
+          {% endif %}
             </li>
-            {% if site.email %}
+          {% if site.email %}
             <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-            {% endif %}
+          {% endif %}
         </ul>
       </div>
 
       <div class="footer-col footer-col-2">
+      </div>
+
+      <div class="footer-col footer-col-3">
         <ul class="social-media-list">
           {% if site.github_username %}
           <li>
-            {% include icon-github.html username=site.github_username %}
+            {% include icon-github.html %}
           </li>
           {% endif %}
 
           {% if site.twitter_username %}
           <li>
-            {% include icon-twitter.html username=site.twitter_username %}
+            {% include icon-twitter.html %}
           </li>
           {% endif %}
+          <li <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">RSS</a></p></li>
         </ul>
-      </div>
-
-      <div class="footer-col footer-col-3">
-        <p>{{ site.description | escape }}</p>
       </div>
     </div>
 

@@ -1,10 +1,9 @@
 ---
 layout: page
-title: S.T.ONE
+title: "S.T.ONE"
+description: "Spherical Tetrahedral ONE"
 permalink: /stone/
 ---
-
-## Spherical Tetrahedral ONE
 
 ### punti di ascolto elettroacustici omnidirezionali
 
