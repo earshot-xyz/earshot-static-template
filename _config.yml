@@ -16,17 +16,15 @@
 title: EARSHOT
 email: info@earhost.xyz
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  the range or distance over which one can hear or be heard
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: earshot-xyz
 github_username:  earshot-xyz
+google_analytics: UA-59367601-1
 
 # Build settings
 markdown: kramdown
-theme: minima
 gems:
   - jekyll-feed
 exclude:
